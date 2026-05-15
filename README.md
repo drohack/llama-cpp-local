@@ -2,6 +2,12 @@
 
 Scripts and configuration for running [llama.cpp](https://github.com/ggml-org/llama.cpp) locally as an OpenAI-compatible inference server for use with Claude Code via [clawgate](https://github.com/goclawgate/clawgate).
 
+## Getting Started (what you need to change)
+
+1. **`tune_ncpu.py` and `verify_vram_256k.py`** — update `LLAMA_EXE` and `MODEL_PATH` at the top of each file to match your llama.cpp install and model path
+2. **Sibling directory** — these scripts look for the benchmark fixture at `../llm-bench/shared/fixture_real_request.json`. Clone [llm-bench](https://github.com/drohack/llm-bench) as a sibling directory or update the `FIXTURE` path in the scripts
+3. **`run_server.ps1`** — update `$MODEL_PATH` if using a different model
+
 ## Setup
 
 ### 1. Download llama.cpp
