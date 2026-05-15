@@ -12,10 +12,10 @@ Usage:
 import argparse, json, subprocess, time, httpx, sys
 from pathlib import Path
 
-LLAMA_EXE  = r"C:\llama_cpp\llama-server.exe"          # adjust to your llama.cpp install path
-MODEL_PATH = r"C:\llama_cpp\models\your-model.gguf"    # adjust to your model path
+LLAMA_EXE  = r"C:\llama_cpp\llama-server.exe"
+MODEL_PATH = r"C:\llama_cpp\models\Qwen3.6-35B-A3B-UD-IQ3_XXS.gguf"
 LOG_PATH   = str(Path(__file__).parent / "logs" / "llama-server-live.log")
-FIXTURE    = str(Path(__file__).parent / "fixture_real_request.json")
+FIXTURE    = str(Path(__file__).parent.parent / "llm-bench" / "shared" / "fixture_real_request.json")
 RESULTS_MD = str(Path(__file__).parent / "tuning_results.md")
 VRAM_MAX   = 9400
 VRAM_KILL  = 9500
